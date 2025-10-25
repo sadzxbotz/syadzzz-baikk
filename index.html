@@ -1,40 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Seberapaaa kenall sih kamuu samaa syadz yangg baikkk hatii ini🤭</title>
-<link rel="stylesheet" href="style.css" />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Seberapaaa kenall sih kamuu samaa syadz yangg baikkk hatii ini 🤭</title>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<div class="container">
-  <h1>Seberapaaa kenall sih kamuu samaa syadz yangg baikkk hatii ini🤭</h1>
-  <div id="intro">
-    <p>🐼 Selamat datang di game quiz tentang Syadz! Jawab semua pertanyaan untuk lihat seberapa kamu kenal dia 😆</p>
-    <input id="name" placeholder="Masukkan nama kamu" />
-    <button onclick="startQuiz()">Mulai</button>
-  </div>
+  <div class="bg-panda"></div>
+  <main class="app">
+    <header class="top">
+      <div class="logo">🐼</div>
+      <h1 id="game-title">Seberapaaa kenall sih kamuu samaa syadz yangg baikkk hatii ini 🤭</h1>
+    </header>
 
-  <div id="quiz" style="display:none;">
-    <div id="qnum"></div>
-    <img id="qimg" class="img" />
-    <div id="question"></div>
-    <div id="answers"></div>
-    <div class="nav">
-      <button onclick="prevQ()">Sebelumnya</button>
-      <button onclick="nextQ()">Selanjutnya</button>
-    </div>
-  </div>
+    <section id="intro" class="card">
+      <p>🐼 Selamat datang di game quiz tentang Syadz! Jawab semua pertanyaan untuk lihat seberapa kamu kenal dia 😆</p>
+      <input id="name" placeholder="Masukkan nama kamu" />
+      <div class="controls"><button id="startBtn" class="btn">Mulai</button></div>
+    </section>
 
-  <div id="result" style="display:none;">
-    <h2>Hasil Akhir</h2>
-    <p id="score"></p>
-    <p id="rating"></p>
-  </div>
-</div>
+    <section id="quiz" class="card" style="display:none;">
+      <div id="qnum" class="meta"></div>
+      <div id="img-wrap"><img id="qimg" class="qimg" alt="gambar"/></div>
+      <div id="question" class="question"></div>
+      <div id="answers" class="choices"></div>
+      <div class="nav">
+        <button id="prevBtn" class="btn">Sebelumnya</button>
+        <button id="nextBtn" class="btn">Selanjutnya</button>
+      </div>
+    </section>
 
-<footer>🐼 Semua gambar kartun bisa kamu ganti sendiri di folder <b>img/</b></footer>
+    <section id="result" class="card" style="display:none;">
+      <h2>Hasil Akhir</h2>
+      <p id="score"></p>
+      <p id="rating"></p>
 
-<script src="script.js"></script>
+      <div class="card small">
+        <h3>Daftarr orang orangg yangg ngefens sama gw 🥱</h3>
+        <div id="leaderboard" class="leaderboard"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">🐼 Gambar kartun bisa diganti di folder <b>img/</b></footer>
+
+  <!-- Firebase (compat) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
